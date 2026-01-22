@@ -1,0 +1,450 @@
+/* General Body Styling */
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: white;
+  color: #333;
+  padding-top: 80px; /* Adjusted to prevent content from being hidden under navbar */
+}
+
+/*   ----- Navbar Styling ----- */
+
+.navbar {
+  background: linear-gradient(90deg, #3a6186, #89253e);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.navbar:hover {
+  background: linear-gradient(90deg, #89253e, #3a6186);
+}
+
+.navbar-brand img {
+  height: 100px;
+  width: auto;
+  max-width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.1);
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+  font-weight: bold;
+  margin: 0 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffd700;
+  transform: scale(1.1);
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=UTF8,%3csvg xmlns%3d%27http://www.w3.org/2000/svg%27 viewBox%3d%270 0 30 30%27%3e%3cpath stroke%3d%27rgba%288, 8, 8, 0.7%29%27 stroke-width%3d%272%27 d%3d%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e");
+}
+
+/* ---- Footer Styling ---- */
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 60px 20px; /* Increased padding for better spacing */
+  font-family: Arial, sans-serif;
+  width: 100%;
+  text-align: left;
+  margin-top: 60px; /* Added margin to separate from about-container */
+}
+
+/* Footer Container */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Footer Section */
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+  padding: 15px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Animations for FOOTER */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* ---- Quick Contact Styles ---- */
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: scale(1.05);
+}
+
+/* Phone Number Highlight */
+.contact-item .phone-number {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffd700; /* Gold color */
+  transition: color 0.3s ease;
+}
+
+.contact-item .phone-number:hover {
+  color: #ffa500; /* Orange on hover */
+}
+
+.contact-item .icon {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #4caf50;
+}
+
+/* Company and Services List */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #ddd;
+  font-size: 14px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #4caf50;
+  transform: translateX(5px);
+}
+
+/* Social Media Icons */
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  animation: bounce 2s infinite;
+}
+
+.social-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: #4caf50; /* Green background */
+  border-radius: 50%;
+  color: white;
+  font-size: 18px;
+  text-decoration: none; /* Removes underline */
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #fff;
+  color: #4caf50;
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-section {
+    min-width: auto;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .navbar .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .navbar-brand img {
+    height: 60px; /* reduce logo size */
+  }
+
+  .navbar-nav {
+    margin-top: 10px;
+  }
+
+  .navbar-nav .nav-link {
+    margin: 8px 0;
+    font-size: 16px;
+  }
+}
+
+/* Apply Slide-In Animation on Mobile */
+@media (max-width: 768px) {
+  .footer-section {
+    animation: slideIn 1s ease-out forwards;
+  }
+}
+
+/* Footer Section for Mobile */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center; /* Centers text on small screens */
+  }
+
+  .footer-section {
+    min-width: auto; /* Allow footer sections to auto size */
+    margin-bottom: 20px; /* Add some margin between sections */
+  }
+
+  .social-icons {
+    justify-content: center; /* Center social icons */
+  }
+}
+
+/* Apply Slide-In Animation on Mobile */
+@media (max-width: 768px) {
+  .footer-section {
+    animation: slideIn 1s ease-out forwards;
+  }
+}
+
+/* Responsive Styles */
+/* Responsive Styles for About Section (Mobile) */
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    margin: 5px 0;
+  }
+
+  .navbar-brand img {
+    height: 80px;
+  }
+}
+
+
+
+
+/* Slideshow Section */
+.slideshow {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  max-height: 500px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+  width: calc(100% * 3);
+}
+
+.slides img {
+  width: 100vw;
+  height: auto;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Slideshow Navigation */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
+
+/* About Us Section */
+.about-us {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 2.2rem;
+  color: #333;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+  text-align: justify;
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* Statistics Section */
+.stats {
+  background-color: #f8f8f8;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stat-box {
+  background: #fff;
+  padding: 20px;
+  width: 220px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-box i {
+  font-size: 45px;
+  color: black;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  margin-bottom: 10px;
+}
+
+.stat-box i:hover {
+  color: #ff5733;
+  transform: rotate(360deg) scale(1.2);
+  transition: transform 0.5s ease-in-out;
+}
+
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: black;
+  margin: 5px 0;
+}
+
+.stat-box p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .flex-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-box {
+    width: 90%;
+    max-width: 300px;
+  }
+}
+
+
+/* Stack phone numbers vertically */
+.phone-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.phone-wrapper .phone-number {
+  display: block;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}

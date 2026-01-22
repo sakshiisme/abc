@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Responsive Website</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./product.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+  <link rel="stylesheet" href="/final.css">
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html"><img src="../images/logo.png" alt="Logo" class="logo" loading="lazy"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../About/about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Clientele/clientele.html">Clientele</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Product/product.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Contact/contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+
+    <div class="product-container">
+         <!-- LEFT SIDE PRODUCT LIST -->
+        <div class="product-list">
+
+            <ul id="productItems">
+                <li data-product="rsc">Regular Slotted Containers (RSC)</li>
+                 <li data-product="diecut">Die-cut Boxes</li>
+                 <li data-product="heavy">Heavy-duty Corrugated Boxes</li>
+                 <li data-product="custom">Custom-printed Boxes</li>
+                  <li data-product="multi">Multi-depth Boxes</li>
+                  <li data-product="mono">Mono Boxes</li>
+                  <li data-product="printed">Printed Boxes</li>
+                 <li data-product="folding">Folding Cartons</li>
+                <li data-product="rolls">Corrugated Rolls</li>
+                 <li data-product="specialty">Specialty Packaging</li>
+              <li data-product="solutions">Custom Solutions</li>
+                  <li data-product="sustainable">Sustainable Packaging Options</li>
+              </ul>
+              
+        </div>
+
+        <div class="product-content-area">
+            <div class="product-info default" id="defaultInfo">
+                <h2>What are Corrugated Boxes?</h2>
+                <p>Corrugated boxes are manufactured using high-quality corrugated paper boards, designed with multiple fluted layers that enhance strength and durability compared to standard cardboard.</p>
+                <p>These structured layers provide superior flexibility and resilience, making them ideal for various packaging applications.</p>
+                <p>At <strong>Aadinath Box Corporation</strong>, we specialize in producing <strong>premium-quality corrugated boxes</strong> that cater to diverse industries, ensuring protection, efficiency, and sustainability.</p>
+                <h2>Our Range Includes:</h2>
+                <ul>
+                    <li>3 Ply, 5 Ply, 7 Ply, and 9 Ply Corrugated Boxes</li>
+                    <li>Cube Boxes & Shipping Boxes</li>
+                    <li>Custom-Printed and Die-Cut Boxes</li>
+                    <li>Eco-Friendly and Heavy-Duty Packaging Solutions</li>
+                </ul>
+                <p>As a <strong>one-stop packaging solution provider</strong>, we offer custom-designed boxes tailored to specific business needs, including <strong>customized branding, die-cut designs, and reinforced shipping boxes for heavy-duty transit</strong>.</p>
+                <p>Our commitment to <strong>sustainability and innovation</strong> ensures that every packaging solution meets the highest standards of durability, cost-effectiveness, and eco-friendliness.</p>
+            </div>
+      
+            <div id="productContent" class="product-info1" style="display: none;">
+                 <!-- Dynamic content loads here -->
+            </div>
+             
+            </div>
+          
+        
+       
+    </div>
+    
+
+       <!-- Footer Section -->
+       <footer class="footer reveal">
+        <div class="footer-container">
+            
+            <!-- 1️⃣ Quick Contact Section -->
+            <div class="footer-section">
+                <h3>Quick Contact</h3>
+                <p>If you have any corrugated boxes requirement or need help, feel free to contact us.</p>
+                
+                <div class="contact-item">
+                    <span class="icon">&#128222;</span>
+    
+                    <!-- UPDATED phone numbers (stacked vertically) -->
+                    <div class="phone-wrapper">
+                        <span class="phone-number">+91-9266035151</span>
+                        <span class="phone-number">+91-8287094469</span>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope email-icon"></i>
+                    <a href="mailto:aadinathboxcorporation@gmail.com" class="email-text">
+                      aadinathboxcorporation@gmail.com
+                    </a>
+                  </div>
+                  
+                
+                <div class="contact-item">
+                    <span class="icon">&#127970;</span>
+                    <span class="contact-text">B-4, Sector A-5/6, Tronica City, Ghaziabad, UP - 201103, India</span>
+                </div>
+            </div>
+
+            <!-- 2️⃣ Company Section -->
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul class="company-list">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+
+            <!-- 3️⃣ Services Section -->
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul class="services-list">
+                    <li><a href="#">Custom Packaging</a></li>
+                    <li><a href="#">Box Manufacturing</a></li>
+                    <li><a href="#">Printing & Branding</a></li>
+                    <li><a href="#">Logistics Support</a></li>
+                </ul>
+            </div>
+
+            <!-- 4️⃣ Social Media Section -->
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+     <script src="productScript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/final.js" defer></script>
+</body>
+</html>

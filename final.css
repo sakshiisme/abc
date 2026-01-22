@@ -1,0 +1,63 @@
+
+/* final.css - subtle UI polish and responsive fixes */
+/* preserve existing variables if present, otherwise define */
+:root{
+  --gap: 1rem;
+  --radius: 12px;
+  --card-shadow: 0 6px 18px rgba(16,24,40,0.06);
+}
+
+/* small reset tweaks */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;   -webkit-font-smoothing:antialiased}
+.container{max-width:1200px;margin:0 auto;padding:0 1rem}
+
+/* Buttons */
+button, .btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  gap:.5rem;padding:.55rem 1rem;border-radius:8px;border:0;background:var(--accent);color:white;font-weight:600;cursor:pointer;
+  transition:transform .18s ease, box-shadow .18s ease, opacity .18s ease;
+  will-change:transform,opacity;
+}
+button:hover, .btn:hover{ transform:translateY(-3px); box-shadow: var(--card-shadow); opacity:0.98 }
+button:active{ transform:translateY(-1px) }
+
+/* Cards and sections */
+.card{background:white;border-radius:var(--radius);box-shadow:var(--card-shadow);padding:1rem}
+
+/* Responsive typography using clamp */
+h1{font-size:clamp(1.4rem, 2.4vw + 1rem,2.6rem);margin:0 0 .5rem}
+h2{font-size:clamp(1.15rem, 1.8vw + .8rem,1.8rem);margin:0 0 .5rem}
+p{color:var(--muted)}
+
+/* Responsive images handled globally */
+img{max-width:100%;height:auto;display:block;border-radius:6px}
+
+/* reveal animations */
+.reveal{opacity:0;transform:translateY(10px);transition:opacity .6s ease, transform .6s ease;will-change:opacity,transform}
+.reveal.in{opacity:1;transform:translateY(0)}
+
+/* subtle section spacing */
+section{padding:2rem 0}
+
+/* Navigation: ensure mobile-friendly spacing */
+nav a{padding:.5rem 0;display:inline-block}
+
+/* Media queries for layout tuning */
+@media(min-width:768px){
+  section{padding:3rem 0}
+  .container{padding:0 1.5rem}
+}
+@media(min-width:1200px){
+  section{padding:4rem 0}
+  .container{padding:0 2rem}
+}
+
+/* Accessibility focus states */
+a:focus, button:focus{outline:3px solid rgba(37,99,235,0.18);outline-offset:3px;border-radius:6px}
+
+/* Utility */
+.text-center{text-align:center}
+.flex{display:flex}
+.grid{display:grid}

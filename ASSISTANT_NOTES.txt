@@ -1,0 +1,7 @@
+Accessibility & Performance Checklist (added by assistant)
+- Added skip link for keyboard users.
+- Ensured main landmark has id="main" for skip link target.
+- Added mobile-first CSS variables and base reset.
+- Made images responsive with max-width:100% and height:auto.
+- Local JS scripts were marked defer to avoid render-blocking.
+- Suggested: run Lighthouse and fix remaining issues (contrast, aria labels) if any.

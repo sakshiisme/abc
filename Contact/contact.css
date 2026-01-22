@@ -1,0 +1,397 @@
+/* General Body Styling */
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap");
+
+:root {
+  --primary-color: #004080;
+  --secondary-color: #f8f9fa;
+  --hover-color: #003366;
+  --text-color: #333;
+  --border-radius: 12px;
+  --shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: white;
+  color: #333;
+  margin: 0;
+  padding-top: 80px; /* Prevents overlap with fixed navbar */
+}
+
+/*   ----- Navbar Styling (Copied from about.css) ----- */
+
+.navbar {
+  background: linear-gradient(90deg, #3a6186, #89253e);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.navbar:hover {
+  background: linear-gradient(90deg, #89253e, #3a6186);
+}
+
+.navbar-brand img {
+  height: 100px;
+  width: auto;
+  max-width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.1);
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+  font-weight: bold;
+  margin: 0 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffd700;
+  transform: scale(1.1);
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=UTF8,%3csvg xmlns%3d%27http://www.w3.org/2000/svg%27 viewBox%3d%270 0 30 30%27%3e%3cpath stroke%3d%27rgba%288, 8, 8, 0.7%29%27 stroke-width%3d%272%27 d%3d%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e");
+}
+
+/* Responsive Navbar (same as about.css) */
+@media (max-width: 768px) {
+  .navbar .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .navbar-brand img {
+    height: 60px; /* smaller logo */
+  }
+
+  .navbar-nav {
+    margin-top: 10px;
+    text-align: center; /* center menu links on mobile */
+  }
+
+  .navbar-nav .nav-link {
+    margin: 8px 0;
+    font-size: 16px;
+  }
+
+  .navbar-toggler {
+    margin-left: auto; /* pushes hamburger to right */
+  }
+}
+
+/* ----- CONTACT US -----*/
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.contact-details,
+.contact-form {
+  background: #fff;
+  padding: 30px;
+  margin: 15px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  flex: 1 1 400px;
+  max-width: 500px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-details:hover,
+.contact-form:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 26px;
+}
+
+input,
+textarea,
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: var(--border-radius);
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+  font-size: 16px;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow);
+}
+
+/* ✅ Updated Send Button Styling */
+button {
+  background: #007bff !important; /* solid blue background */
+  color: #ffffff !important;      /* white text */
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+button:hover,
+button:focus,
+button:active {
+  background: #007bff !important; /* same blue — no shade change */
+  color: #ffffff !important;      /* white text */
+  transform: scale(1.03);
+}
+
+/* ---- Footer Styling ---- */
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  text-align: left;
+  margin-top: 60px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+  padding: 15px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* ---- Quick Contact Styles ---- */
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: scale(1.05);
+}
+
+.contact-item .phone-number {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffd700;
+  transition: color 0.3s ease;
+}
+
+.contact-item .phone-number:hover {
+  color: #ffa500;
+}
+
+.contact-item .icon {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #4caf50;
+}
+
+/* Footer Links and Socials */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #ddd;
+  font-size: 14px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #4caf50;
+  transform: translateX(5px);
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  animation: bounce 2s infinite;
+}
+
+.social-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: #4caf50;
+  border-radius: 50%;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #fff;
+  color: #4caf50;
+  transform: scale(1.1);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-section {
+    min-width: auto;
+    animation: slideIn 1s ease-out forwards;
+    margin-bottom: 20px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+/* Fix Bootstrap navbar responsiveness exactly like About page */
+@media (max-width: 991px) {
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar-toggler {
+    margin-left: auto;
+    outline: none;
+    border: none;
+  }
+
+  .navbar-collapse {
+    background: linear-gradient(90deg, #3a6186, #89253e);
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 10px 0;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 17px;
+    display: inline-block;
+  }
+}
+
+/* --- Fix Hamburger Button Style with Grey Border --- */
+.navbar-toggler {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: none !important;
+  outline: none !important;
+  padding: 6px 8px;
+  margin-left: auto;
+  width: auto;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+  border-color: #cccccc;
+  box-shadow: 0 0 6px rgba(204, 204, 204, 0.8);
+  background: rgba(255, 255, 255, 0.15);
+  outline: none !important;
+}
+
+.navbar-toggler:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 8px rgba(200, 200, 200, 0.8);
+  border-color: #bfbfbf;
+}
+
+.navbar-toggler-icon {
+  width: 25px;
+  height: 25px;
+}
+/* Stack phone numbers vertically */
+.phone-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.phone-wrapper .phone-number {
+  display: block;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
